@@ -18,15 +18,16 @@ public class oefening7 {
         	System.out.println("Wat is het woord?");
         	String invoer = sc.nextLine();
         	
-        	if(invoer.length() == 5) {
+        	if(invoer.length() == 5) { // check of het woord de juiste lengte heeft
             	char invoer_arr[] = invoer.toCharArray();
+            	
             	for(int i = 0; i < 5; i ++) {
-            		if(correct_arr[i] == invoer_arr[i]) {
+            		if(correct_arr[i] == invoer_arr[i]) { 
             			hint_arr[i] = '2';
             		} else if(woord.contains(String.valueOf(invoer_arr[i]))) {
             			hint_arr[i] = '1';
-                		}
-            		}
+                	}
+            	}
             	
             	hint = hint.valueOf(hint_arr);
             	
@@ -36,6 +37,7 @@ public class oefening7 {
         	
        	} //einde van game loop
     	System.out.println("Gefeliciteerd! Het woord was inderdaad " + woord);
+    	sc.close();
     }
 }
 
